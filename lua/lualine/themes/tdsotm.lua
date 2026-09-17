@@ -10,11 +10,11 @@ local function mode_section(background, foreground)
 end
 
 return {
-  normal = mode_section(c.surface_sky, c.surface_fg),
+  normal = mode_section(c.surface_red, c.surface_error_fg),
   insert = mode_section(c.surface_green, c.surface_fg),
   replace = mode_section(c.surface_red, c.surface_error_fg),
   visual = mode_section(c.visual_bg, c.visual_fg),
-  command = mode_section(c.surface_yellow, c.surface_fg),
+  command = mode_section(c.surface_orange, c.surface_fg),
   terminal = mode_section(c.surface_green, c.surface_fg),
   inactive = {
     a = { fg = c.fg_dim, bg = c.bg_alt },
