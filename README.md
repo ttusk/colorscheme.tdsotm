@@ -1,5 +1,7 @@
 # The Dark Side Of The Moon
 
+![tdsotm](public/Dark_Side_of_the_Moon.png)
+
 Neovim colorscheme inspired in TDSOTM (Pink Floyd) palette.
 
 ## Usage
