@@ -60,6 +60,7 @@ Plugin managers can install this repository directly; no build step is required.
 Matching templates for the rest of the terminal workflow live under `themes/`:
 
 - Ghostty: copy `themes/ghostty/tdsotm-dark` and `tdsotm-light` to `~/.config/ghostty/themes/`.
+- Lualine: set `options.theme = "tdsotm"`; the native integration lives under `lua/lualine/themes/`.
 - Yazi: copy the two `themes/yazi/` flavor directories to `~/.config/yazi/flavors/`.
 - Starship: use the matching file in `themes/starship/` as `STARSHIP_CONFIG`.
 - Oh My Pi: copy the JSON files in `themes/oh-my-pi/` to `~/.omp/agent/themes/`.
