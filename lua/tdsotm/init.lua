@@ -109,11 +109,12 @@ function M.load()
   link_many({ "Conditional", "Repeat", "Label", "Exception" }, "Statement")
   link_many({ "Include", "Define", "Macro", "PreCondit" }, "PreProc")
   link_many({ "StorageClass", "Structure", "Typedef" }, "Type")
-  link_many({ "SpecialChar", "Tag", "Delimiter", "SpecialComment", "Debug" }, "Special")
+  set("Delimiter", { fg = c.purple })
+  link_many({ "SpecialChar", "Tag", "SpecialComment", "Debug" }, "Special")
   set("Bold", { bold = true })
   set("Italic", { italic = true })
   set("TypeDefinition", { fg = c.orange, bold = true })
-  set("Parameter", { fg = c.fg, italic = true })
+  set("Parameter", { fg = c.fg })
 
   local treesitter_links = {
     ["@comment"] = "Comment",
