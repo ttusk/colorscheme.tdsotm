@@ -15,7 +15,7 @@ A Neovim colorscheme inspired by the palette of Pink Floyd's *The Dark Side of t
 
 ```lua
 {
-  "ttusk/nvim.tdsotm",
+  "ttusk/colorscheme.tdsotm",
   lazy = false,
   priority = 1000,
   config = function()
@@ -30,7 +30,7 @@ A Neovim colorscheme inspired by the palette of Pink Floyd's *The Dark Side of t
 
 ```lua
 use({
-  "ttusk/nvim.tdsotm",
+  "ttusk/colorscheme.tdsotm",
   config = function()
     vim.opt.termguicolors = true
     vim.opt.background = "dark"
@@ -42,7 +42,7 @@ use({
 ### vim-plug
 
 ```vim
-Plug 'ttusk/nvim.tdsotm'
+Plug 'ttusk/colorscheme.tdsotm'
 ```
 
 Then select the theme in `init.lua`:
@@ -54,6 +54,18 @@ vim.cmd.colorscheme("tdsotm")
 ```
 
 Plugin managers can install this repository directly; no build step is required.
+
+## Other themes
+
+Matching templates for the rest of the terminal workflow live under `themes/`:
+
+- Ghostty: copy `themes/ghostty/tdsotm-dark` and `tdsotm-light` to `~/.config/ghostty/themes/`.
+- Yazi: copy the two `themes/yazi/` flavor directories to `~/.config/yazi/flavors/`.
+- Starship: use the matching file in `themes/starship/` as `STARSHIP_CONFIG`.
+- Oh My Pi: copy the JSON files in `themes/oh-my-pi/` to `~/.omp/agent/themes/`.
+- tmux: source `themes/tmux/tdsotm.conf` from your tmux configuration.
+
+Dark and light variants use the same semantic palette across every target.
 
 ## Variants
 

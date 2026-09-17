@@ -93,8 +93,9 @@ function M.load()
   set("Boolean", { fg = c.yellow })
   set("Float", { fg = c.purple })
   set("Identifier", { fg = c.fg })
-  set("Function", { fg = c.sky })
+  set("Function", { fg = c.sky, bold = true })
   set("Statement", { fg = c.red })
+  set("Keyword", { fg = c.red, bold = true })
   set("Operator", { fg = c.yellow })
   set("PreProc", { fg = c.orange })
   set("Type", { fg = c.orange })
@@ -105,15 +106,18 @@ function M.load()
   set("Todo", { fg = c.surface_fg, bg = c.surface_yellow, bold = true })
 
   link_many({ "String" }, "Character")
-  link_many({ "Conditional", "Repeat", "Label", "Keyword", "Exception" }, "Statement")
+  link_many({ "Conditional", "Repeat", "Label", "Exception" }, "Statement")
   link_many({ "Include", "Define", "Macro", "PreCondit" }, "PreProc")
   link_many({ "StorageClass", "Structure", "Typedef" }, "Type")
   link_many({ "SpecialChar", "Tag", "Delimiter", "SpecialComment", "Debug" }, "Special")
   set("Bold", { bold = true })
   set("Italic", { italic = true })
+  set("TypeDefinition", { fg = c.orange, bold = true })
+  set("Parameter", { fg = c.fg, italic = true })
 
   local treesitter_links = {
     ["@comment"] = "Comment",
+    ["@comment.documentation"] = "Comment",
     ["@constant"] = "Constant",
     ["@constant.builtin"] = "Constant",
     ["@string"] = "String",
@@ -144,11 +148,11 @@ function M.load()
     ["@operator"] = "Operator",
     ["@type"] = "Type",
     ["@type.builtin"] = "Type",
-    ["@type.definition"] = "Type",
-    ["@constructor"] = "Type",
+    ["@type.definition"] = "TypeDefinition",
+    ["@constructor"] = "TypeDefinition",
     ["@property"] = "Identifier",
     ["@field"] = "Identifier",
-    ["@parameter"] = "Identifier",
+    ["@parameter"] = "Parameter",
     ["@punctuation.delimiter"] = "Delimiter",
     ["@punctuation.bracket"] = "Delimiter",
     ["@punctuation.special"] = "Special",
